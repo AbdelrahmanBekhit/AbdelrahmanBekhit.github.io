@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav {
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: solid 2px #4a0aa7;
+    border-bottom: solid 1px #D3D3D377;
+    margin-top: 5px;
+  }
+  
+  html, body {
+    margin: 0px;
+  }
+  
+  nav a{
+    font-size: 17px;
+    text-decoration: none;
+    color: grey;
+    padding: 10px;
+  }
+  
+  .current {
+    color: #4a0aa7;
+    padding: 5px;
+  }
+  
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+  
+  .img-text{
+    flex:1;
+    float: left;
+      border-right: solid 1px #D3D3D377;	
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    height: 500px;
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 1px 0px 1px darkgrey;
+  }
+  
+  .name {
+    color: #555555;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .email {
+    color: #4a0aa7;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .text{
+      flex:2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    font-family: Arial; 
+    font-size: 15px; 
+  }
+  
+  
+  .intro{
+    font-size: 25px;
+    font-family: Arial;
+    color: grey;
+  }
+  
+  .y{
+    height: 20px; 
+    width: 350px;
+  }
+  
+  .x {
+    font-weight: bold;
+  }
+  
+  .education_specific{
+    white-space: nowrap;  
+    font-size: 17px; 
+    width:50px;
+  }
+  
+  .points{
+    font-family: Arial; 
+    font-size: 15px; 
+  }
+  
+  .footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    font-size: 12px;
+    text-family: Arial;
+  }
+  
+  .small {
+      font-size: 14px;
+    font-family: calibri;
+    text-align: right;
+  }
+  
+  .edu {
+    padding-top: 30px;
+    font-weight: bold;
+  }
+  
+  .credentials {
+    padding-top: 50px;
+    color: grey;
+    font-size: 17px;
+  }
+  
+  footer div{
+    display: flex; 
+    border-top: 1px solid #D3D3D377;
+    padding: 5px;
+  }
+  
+  .download{
+    width: 250px ; 
+    padding-top: 50px;
+    font-size: 14px;
+  }
+  
+  html, main{
+    margin: 0px;
+  }
+  
+  .interests li {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .interest-list {
+    list-style-type: none;
+  }
+  
+  .interest-list li::before {
+    content: "- ";
+  }
