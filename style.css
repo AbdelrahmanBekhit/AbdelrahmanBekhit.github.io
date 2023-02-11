@@ -2,6 +2,16 @@
     box-sizing: border-box;
   }
   
+  @media screen and (max-width: 600px) {
+    .img-text {
+      flex: 1;
+      border-right: none;
+    }
+    .text {
+      flex: 1;
+    }
+  }
+    
   body {
     display: flex;
     flex-direction: column;
