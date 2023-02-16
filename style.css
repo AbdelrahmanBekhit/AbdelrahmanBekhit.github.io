@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+.dark-mode #mode, .dark-mode #help, .dark-mode #info{
+  color: white;
+}
+
 .name {
   flex: 1;
   font-weight: bold;
