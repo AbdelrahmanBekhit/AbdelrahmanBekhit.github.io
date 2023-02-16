@@ -1,107 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
- 	<head>
-		<link rel="stylesheet" href="style.css" />
-		<meta name="viewport" content="width=device-width, iniyycale=1.0">
-	</head>
-    <title>Rick Astley - About</title>
-    <header>
-      <nav>
-        <ul style="display: flex; justify-content: space-between; list-style-type: none; padding: 0; margin: 0;">
-          <li>
-            <a href="index.html" class="current">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="education.html">Education</a>
-            <a href="experinece.html">Experience</a>
-            <a href="interests.html">Interests</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  <main>
-    <div class="content">
-      <div class="img-text">
-        <figure>
-          <img src="https://i1.sndcdn.com/artworks-000190552823-ixw3eu-t240x240.jpg" alt="image">
-          <figcaption>
-            <h1 class="name">
-                Rick Astley<br>
-                Singer, Songwriter<br>
-                <a class="email" href="mailto:rick.astley@meme.com">rick.astley@meme.com</a>
-            </h1>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="text">
-        <table class="box2">
-          <tr class = "intro">
-            <td colspan="2"><p>About</p></td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <p class = "x">I'm an English singer,songwriter and radio personality, who has been active in music for several decades. You've probably already seen my video by clicking on random links on the Internet!</p>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <p>A few points about me: I will never</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>
-                <input type="checkbox" name="example1"> Give you up
-              </label>
-            </td>
-            <td>
-              <label>
-                <input type="checkbox" name="example2"> Make you cry
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>
-                <input type="checkbox" name="example3"> Let you down
-              </label>
-            </td>
-            <td>
-              <label>
-                <input type="checkbox" name="example4"> Say goodbye
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>
-                <input type="checkbox" name="example5"> Run around
-              </label>
-            </td>
-            <td>
-              <label>
-                <input type="checkbox" name="example6"> Tell a lie
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>
-                <input type="checkbox" name="example7"> Desert you
-              </label>
-            </td>
-            <td>
-              <label>
-                <input type="checkbox" name="example8"> Hurt you
-              </label>
-            </td>
-          </tr>
-        </table>    
-      </div>
-      <footer class="footer">
-        <div>
-          <p style="margin: auto;">©Rick Astley 2023</p>
-        </div>
-      </footer>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="top">
+      <p class="name">Wordle</p>
+      <button id="mode">&#9681;</button>
+      <button id="help">&#63;</button>
+      <button id="info">&#9432;</button>
     </div>
-  </main>
+    <div class="middle">
+      <div class="game">
+        <div class="wrapper">
+          <button id="reset">Start Over</button>
+          <img id="win" src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif" alt="You Win!">
+        </div>
+      </div>
+     <div class="info">
+        <p>How To Play</p>
+        <ul>
+          <li>Start typing. The letters will appear in the boxes</li>
+          <li>Remove letters with Backspace</li>
+          <li>Hit Enter/Return to submit an answer</li>
+          <li>Letters with green background are in the right spot</li>
+          <li>Letters with yellow background exist in the word, but are 
+							<br>in the wrong spots</li>
+          <li>Letters with gray background do not exist in the word</li>
+          <li>If you need a hint, click the ? icon</li>
+        </ul>
+      </div>
+      <div class="hint">
+        <p></p>
+      </div>
+      <div class="loss">
+      	<p></p>
+      </div>
+    </div>  
+    <footer class="footer">
+      <div>
+        <p style="margin: auto;">© MKF</p>
+      </div>
+    </footer>
+    <script src="./wordle.js"></script>
+  </body>
 </html>
+  
