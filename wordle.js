@@ -12,6 +12,7 @@ infoButton.addEventListener("click", () => {
   middle.classList.toggle("show-info");
 });
 
+
 const table = document.createElement("table");
 let activeCell = null;
 let block4PrevValue = '';
