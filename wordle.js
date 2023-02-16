@@ -96,6 +96,15 @@ resetButton.addEventListener("click", async () => {
 table.setAttribute("id", "table");
 startGame();
 
+const cells = document.querySelectorAll('td');
+cells.forEach(cell => {
+  cell.onclick = () => {
+    cell.contentEditable = true;
+    cell.focus();
+  }
+});
+
+
 document.addEventListener('keydown', (event) => {
   const losses = document.querySelector(".loss"); 
   if (losses.style.display === "block") {
