@@ -14,6 +14,10 @@ body {
   color: white;
 }
 
+.dark-mode #mode, .dark-mode #help, .dark-mode #info{
+  color: white;
+}
+
 .top {
   flex: 0 1 auto;
   display: flex;
