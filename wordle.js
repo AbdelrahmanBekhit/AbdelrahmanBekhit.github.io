@@ -99,10 +99,19 @@ startGame();
 const cells = document.querySelectorAll('td');
 cells.forEach(cell => {
   cell.onclick = () => {
+    activeCell = cell;
+    activeCell.classList.add('active');
     cell.contentEditable = true;
     cell.focus();
   }
+  cell.addEventListener('input', (event) => {
+    const content = event.target.textContent;
+    if (content.length > 1) {
+      event.target.textContent = content.charAt(0);
+    }
+  });
 });
+
 
 
 document.addEventListener('keydown', (event) => {
@@ -130,7 +139,7 @@ document.addEventListener('keydown', (event) => {
       if (col > 0) {
         activeCell = row.children[col - 1];
       }
-    } else if (event.key === 'Enter') {
+    } else if (event.key === 'Enter' || event.key === 'Return') {
       if (col < 3 || !activeCell.textContent ){
         window.alert("You must complete the word first");
         return;
