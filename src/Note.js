@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import CalendarSelector from "./CalendarSelector";
 
 function Note() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -9,14 +8,16 @@ function Note() {
     setSelectedDate(date);
   }
 
+  function handleTodayButtonClick() {
+    setSelectedDate(new Date());
+  }
+
   return (
     <div className="note-page">
       <div className="note-head">
         <input type="text" id="title" placeholder="Untitled" style={{ border: "none", outline: "none" }} />
-        <br></br>
-        <small id="date">
-          <DatePicker selected={selectedDate} onChange={handleDateChange} />
-        </small>
+        <br />
+        <CalendarSelector selectedDate={selectedDate} handleDateChange={handleDateChange} handleTodayButtonClick={handleTodayButtonClick} />
       </div>
       <div className="note-buttons">
         <p>button</p>
