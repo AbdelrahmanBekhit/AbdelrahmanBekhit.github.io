@@ -1,16 +1,135 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-p {
-  margin: 0;
-  padding: 0;
+html, body {
+  margin: 0px;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+
+.top {
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #D3D3D377;
+  border-top: 3px solid #423c52;
+}
+
+.top button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;    
+  margin-left: 0;
+  padding: 20px;  
+}
+
+.top button:hover , .list-top button:hover{
+  background-color: #423c52;
+  cursor: pointer;
+  color: white;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.name h1 {
+  font-size: 30px;
+  font-family: "Trebuchet MS";
+  margin: 0px;
+  font-weight: bold;
+}
+
+small {
+  font-size: 10px;
+  font-family: "Trebuchet MS";
+  margin: 0px;
+  color: rgb(135, 135, 135);
+  font-weight: bold;
+}
+
+.page {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  height: 87vh;
+}
+
+.list{
+  border-right : 1px solid #D3D3D377;
+  display: block;
+}
+
+.list-top {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #D3D3D377;
+}
+
+h2 {
+  font-size: 25px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.add {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;    
+  margin-left: 150px ;
+  font-weight: bold;
+  padding: 10px;  
+}
+
+.note {
+  background-color: bisque;
+  min-height: 70px;
+}
+
+.note-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.note-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #D3D3D377;
+}
+
+.note-buttons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #D3D3D377;
+}
+
+.note-body {
+  flex: 1;
+  padding: 10px;
+}
+
+#date {
+  color: black;
+  font-family: sans-serif;
+}
+
+.note-head button {
+  background-color: transparent;
+  border: none;
+  font-size: 10px;
 }
