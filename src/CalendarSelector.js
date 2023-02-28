@@ -1,23 +1,25 @@
-import React from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import React, { useState } from "react";
 
-function CalendarSelector({ selectedDate, handleDateChange, handleTodayButtonClick }) {
+const CalendarSelector = () => {
+  const localOffset = new Date().getTimezoneOffset() * 60000;
+  const [date, setDate] = useState(new Date(Date.now() - localOffset).toISOString().slice(0, 19));
+
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
   return (
     <div>
-      <small id="date">
-        <DatePicker
-          selected={selectedDate}
-          onChange={handleDateChange}
-          showTimeSelect
-          timeFormat="HH:mm:ss"
-          timeIntervals={1}
-          dateFormat="yyyy-MM-dd h:mm:ss aa" 
-        />
-      </small>
-      <button onClick={handleTodayButtonClick}>Today</button>
+      <label htmlFor="date-input"></label>
+      <input
+        id="date-input"
+        type="datetime-local"
+        value={date}
+        style={{ border: "none", outline: "none", paddingLeft: "11px" }}
+        onChange={handleDateChange}
+      />
     </div>
   );
-}
+};
 
 export default CalendarSelector;
