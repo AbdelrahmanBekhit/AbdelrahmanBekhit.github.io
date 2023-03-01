@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-//import CalendarSelector from "./CalendarSelector";
-//import Typing from "./Typing";
+import { useNavigate } from 'react-router-dom';
 
-function Note({ activeNote}) {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+function Note({activeNote}) {
+  const navigate = useNavigate();
 
-  function handleDateChange(date) {
-    setSelectedDate(date);
+  function handleEditClick() {
+    navigate.push('/edit');
   }
   return (  
     <div className="note-page">
@@ -18,7 +17,7 @@ function Note({ activeNote}) {
           </small>
         </div>
         <div>
-          <button id="EditButton">Edit</button>
+          <button id="EditButton" onClick={handleEditClick}>Edit</button>
           <button id="deleteButton">Delete</button>
         </div>
       </div>
@@ -29,6 +28,4 @@ function Note({ activeNote}) {
   );
 }
 // at 28:12
-//<input type="text" id="title" placeholder="Untitled" style={{ border: "none", outline: "none" }} />
-//<CalendarSelector selectedDate={selectedDate} handleDateChange={handleDateChange} />
 export default Note;
