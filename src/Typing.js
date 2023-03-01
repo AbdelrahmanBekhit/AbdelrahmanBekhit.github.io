@@ -43,8 +43,9 @@ function Typing(props) {
       <div 
         contentEditable
         ref={textRef}
-        style={{padding: '10px', border: 'none', outline: '1px black solid', 
-        width: '100%', minWidth: '100%', minHeight: '100%', height: '100%', }}
+        style={{padding: '10px', border: 'none', outline: 'transparent', 
+        minWidth: '90%', minHeight: '99%'}}
+        placeholder="Start typing..."
       ></div>
     </div>
   );

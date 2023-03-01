@@ -55,12 +55,24 @@ small {
   flex: auto;
   display: flex;
   flex-direction: row;
-  height: 87vh;
+  height: 79vh;
 }
 
 .list{
   border-right : 1px solid #D3D3D377;
   display: block;
+}
+
+.list-note {
+  padding: 5px;
+  font-family: "Trebuchet MS" ;
+}
+
+.active {
+  background-color: #423c52;
+  color: white;
+  padding: 5px;
+  font-family: "Trebuchet MS" ;
 }
 
 .list-top {
@@ -105,7 +117,7 @@ h2 {
 .note-head {
   display: flex;
   flex-direction: row;
-    align-items: flex-start;
+  align-items: flex-start;
   border-bottom: 1px solid #D3D3D377;
   justify-content: space-between;
   align-items: center;
@@ -130,8 +142,17 @@ h2 {
   border: none;
   outline: none;
   background-color: transparent;
-  padding: 10px;
+  padding: 12px;
   font-size: 15px;
+}
+
+.note-buttons {
+  border-bottom: 1px solid #D3D3D377;
+}
+
+.note-body #link {
+  padding: 9px;
+  padding-bottom: 12px;
 }
 
 .note-buttons select {
@@ -140,9 +161,13 @@ h2 {
   background-color: transparent;
   width: auto;
 }
+
 .note-body {
   flex: 1;
   display: flex;
-  width: 100%;
+
 }
 
+.note-body > div {
+  flex: 1; 
+}

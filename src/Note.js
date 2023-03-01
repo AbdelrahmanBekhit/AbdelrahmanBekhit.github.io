@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import CalendarSelector from "./CalendarSelector";
-import Typing from "./Typing";
+//import CalendarSelector from "./CalendarSelector";
+//import Typing from "./Typing";
 
-function Note() {
+function Note({ activeNote}) {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   function handleDateChange(date) {
@@ -12,21 +12,23 @@ function Note() {
     <div className="note-page">
       <div className="note-head">
         <div style={{ display: "flex", flexDirection: "column"}}>
-          <input type="text" id="title" placeholder="Untitled" style={{ border: "none", outline: "none" }} />
+          <p id="title">{activeNote.title}</p>
           <small>
-            <CalendarSelector selectedDate={selectedDate} handleDateChange={handleDateChange} />
+            {activeNote.lastModified}
           </small>
         </div>
         <div>
-          <button id="saveButton">Save</button>
+          <button id="EditButton">Edit</button>
           <button id="deleteButton">Delete</button>
         </div>
       </div>
       <div className="note-body">
-        <Typing />
+        {activeNote.body}
       </div>
     </div>
   );
 }
-
+// at 28:12
+//<input type="text" id="title" placeholder="Untitled" style={{ border: "none", outline: "none" }} />
+//<CalendarSelector selectedDate={selectedDate} handleDateChange={handleDateChange} />
 export default Note;

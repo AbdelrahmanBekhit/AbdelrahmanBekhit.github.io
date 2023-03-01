@@ -28,7 +28,7 @@ function EditButtons({ handleButtonClick }) {
       <button onClick={() => handleButtonClick('underline')}>
         <u>U</u>
       </button>
-      <button onClick={() => handleButtonClick('link')}>
+      <button id = "link" onClick={() => handleButtonClick('link')}>
         <span>🔗</span>
       </button>
       <button onClick={() => handleButtonClick('ordered-list')}>
@@ -38,7 +38,7 @@ function EditButtons({ handleButtonClick }) {
         <span>•</span>
       </button>
       <button onClick={() => handleButtonClick('remove-formatting')}>
-        <span style={{ textDecoration: 'line-through' }}>T</span>
+        <span>X</span>
       </button>
     </div>
   );
