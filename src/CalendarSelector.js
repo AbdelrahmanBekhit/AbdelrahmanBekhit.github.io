@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const CalendarSelector = () => {
-  const localOffset = new Date().getTimezoneOffset() * 60000;
+  const localOffset = new Date().getTimezoneOffset() * 60000; 
   const [date, setDate] = useState(new Date(Date.now() - localOffset).toISOString().slice(0, 19));
 
   const handleDateChange = (e) => {
