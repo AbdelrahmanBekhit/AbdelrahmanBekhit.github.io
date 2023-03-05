@@ -1,31 +1,52 @@
-import React, { useState } from "react";
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Note({activeNote}) {
+function Note({ notes, onDeleteNote, activeNote }) {
   const navigate = useNavigate();
-
+  const note = notes.find((note) => note.id === activeNote);
+  
   function handleEditClick() {
-    navigate.push('/edit');
+    navigate(`/${activeNote}/edit`);
   }
-  return (  
+
+  function handleDeleteClick() {
+    const answer = window.confirm("Are you sure?");
+    if (answer) {
+      onDeleteNote(activeNote);
+      navigate('/');
+    }
+  }
+
+  const lastModified = new Date(note.lastModified).toLocaleString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
+
+  function createMarkup() {
+    return { __html: note.body };
+  }
+
+  return (
     <div className="note-page">
       <div className="note-head">
-        <div style={{ display: "flex", flexDirection: "column"}}>
-          <p id="title">{activeNote.title}</p>
-          <small>
-            {activeNote.lastModified}
+        <div className='temp' style={{ display: "flex", flexDirection: "column"}}>
+          <div id="title">{note.title}</div>
+          <small className='save-date'>
+            {lastModified}
           </small>
         </div>
         <div>
-          <button id="EditButton" onClick={handleEditClick}>Edit</button>
-          <button id="deleteButton">Delete</button>
+          <button id="editButton" onClick={handleEditClick}>Edit</button>
+          <button id="deleteButton" onClick={handleDeleteClick}>Delete</button>
         </div>
       </div>
-      <div className="note-body">
-        {activeNote.body}
-      </div>
+      <div className='body' dangerouslySetInnerHTML={createMarkup()} style={{padding: "10px"}}></div>
     </div>
   );
 }
-// at 28:12
+
 export default Note;

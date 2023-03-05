@@ -1,0 +1,18 @@
+
+function SaveNote() {
+    var noteTitle = document.getElementById("noteTitle").value;
+    var noteContent = document.getElementById("noteContent").value;
+    var noteDate = new Date();
+  
+    var note = {
+      title: noteTitle,
+      content: noteContent,
+      date: noteDate.toDateString(),
+    };
+  
+    localStorage.setItem('note', JSON.stringify(note));
+    window.location.href = "index.html";
+  }
+  
+
+export default SaveNote;

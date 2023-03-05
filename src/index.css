@@ -43,24 +43,45 @@ html, body {
   font-weight: bold;
 }
 
+.no-note {
+  font-size: 40px;
+  color: #64646477;
+  display : flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.save-date {
+  padding: 6px;
+  padding-left: 11px;
+  font-size: 12px;
+}
+
 small {
   font-size: 10px;
   font-family: "Trebuchet MS";
   margin: 0px;
   color: rgb(135, 135, 135);
   font-weight: bold;
+  padding: 0px;
 }
 
 .page {
   flex: auto;
   display: flex;
   flex-direction: row;
-  height: 79vh;
+  height: 87vh;
+}
+
+#list:focus + .list {
+  display: none;
 }
 
 .list{
   border-right : 1px solid #D3D3D377;
   display: block;
+  overflow-y: auto;
 }
 
 .list-note {
@@ -121,6 +142,7 @@ h2 {
   border-bottom: 1px solid #D3D3D377;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .note-head #title {
@@ -129,6 +151,7 @@ h2 {
   margin-right: 10px;
   font-weight: bold;
   font-size: 30px;
+  font-family: "Trebuchet MS";
 }
 
 .note-head button {
@@ -153,6 +176,7 @@ h2 {
 .note-body #link {
   padding: 9px;
   padding-bottom: 12px;
+  overflow-y: auto;
 }
 
 .note-buttons select {
